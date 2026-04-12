@@ -1,0 +1,16 @@
+{
+  "P-01": {
+    "ID": "P-01",
+    "status": "ocupada",
+    "callsign": "P-01",
+    "busy_until": null,
+    "actual_plane": null
+  },
+  "A-01": {
+    "ID": "A-01",
+    "status": "ocupada",
+    "callsign": "A-01",
+    "busy_until": null,
+    "actual_plane": null
+  }
+}

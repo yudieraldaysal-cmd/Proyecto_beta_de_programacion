@@ -1,0 +1,18 @@
+{
+  "AL2-01": {
+    "id": "AL2-01",
+    "airplane_type": "privado",
+    "status": "disponible",
+    "assigned_airstrip": null,
+    "priority": 0,
+    "pilot_id": null
+  },
+  "NOEL06": {
+    "id": "NOEL06",
+    "airplane_type": "militar",
+    "status": "disponible",
+    "assigned_airstrip": null,
+    "priority": 0,
+    "pilot_id": null
+  }
+}

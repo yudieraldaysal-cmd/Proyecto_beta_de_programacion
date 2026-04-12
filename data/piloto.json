@@ -1,0 +1,18 @@
+{
+  "PIL-01": {
+    "id": "PIL-01",
+    "first_name": "Alberto",
+    "last_name": "Rodriguez",
+    "airplane_type": "privado",
+    "status": "disponible",
+    "priority": 0
+  },
+  "PIL-02": {
+    "id": "PIL-02",
+    "first_name": "Brayhant",
+    "last_name": "Chávez",
+    "airplane_type": "militar",
+    "status": "disponible",
+    "priority": 0
+  }
+}
