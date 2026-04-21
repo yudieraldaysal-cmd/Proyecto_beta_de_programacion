@@ -96,12 +96,17 @@ def load_airstrips_json(path: Optional[str] = None) -> None:
     global airstrip_map
     if path is None:
         path = os.path.join(DATA_FOLDER, FILEPATH)
+    
+    airstrip_map.clear()  # Limpiar diccionario existente
+    
     if not os.path.exists(path):
-        airstrip_map = {}
+        # No hacer nada, airstrip_map ya está vacío
         return
+    
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    airstrip_map = raw
+    
+    airstrip_map.update(raw)  # Actualizar diccionario in-place
 
 
 def pista_existe(ID: str) -> bool:

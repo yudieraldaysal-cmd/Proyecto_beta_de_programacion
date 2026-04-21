@@ -135,12 +135,17 @@ def load_events_json(path: Optional[str] = None) -> None:
     global events_map
     if path == None:
         path = os.path.join(DATA_FOLDER, FILEPATH)
+    
+    events_map.clear()  # Limpiar diccionario existente
+    
     if not os.path.exists(path):
-        events_map = {}
+        # No hacer nada, events_map ya está vacío
         return
+    
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    events_map = raw
+    
+    events_map.update(raw)  # Actualizar diccionario in-place en lugar de reasignar
 
 
 def simular_calendario():

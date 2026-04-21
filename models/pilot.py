@@ -120,12 +120,17 @@ def load_pilots_json(path: Optional[str] = None) -> None:
     global pilots_map
     if path is None:
         path = os.path.join(DATA_FOLDER, FILEPATH)
+    
+    pilots_map.clear()  # Limpiar diccionario existente
+    
     if not os.path.exists(path):
-        pilots_map = {}
+        # No hacer nada, pilots_map ya está vacío
         return
+    
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    pilots_map = raw
+    
+    pilots_map.update(raw)  # Actualizar diccionario in-place
 
 
 # ---------- Utilidades ----------

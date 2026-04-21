@@ -109,12 +109,17 @@ def load_airplanes_json(path: Optional[str] = None) -> None:
     global airplanes_map
     if path is None:
         path = os.path.join(DATA_FOLDER, FILEPATH)
+    
+    airplanes_map.clear()  # Limpiar diccionario existente
+    
     if not os.path.exists(path):
-        airplanes_map = {}
+        # No hacer nada, airplanes_map ya está vacío
         return
+    
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    airplanes_map = raw
+    
+    airplanes_map.update(raw)  # Actualizar diccionario in-place
 
 
 # ---------- Utilidades ----------
