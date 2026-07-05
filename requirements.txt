@@ -1,0 +1,24 @@
+# Torre de Control - Dependencias
+# ================================
+# Este proyecto NO requiere dependencias externas de pip.
+# Utiliza únicamente la biblioteca estándar de Python 3.12+:
+#
+#   - tkinter        (GUI - incluido con Python)
+#   - json           (persistencia de datos)
+#   - os             (manejo de archivos/directorios)
+#   - time           (pausas en simulación)
+#   - threading      (simulación en segundo plano en GUI)
+#   - uuid           (generación de IDs para eventos)
+#   - io / contextlib (captura de stdout en GUI)
+#   - dataclasses    (modelos de datos)
+#   - enum / auto    (tipos de eventos)
+#   - typing         (tipado opcional)
+#
+# En sistemas Linux, tkinter puede requerir instalación del paquete del sistema:
+#   Debian/Ubuntu:  sudo apt install python3-tk
+#   Fedora:         sudo dnf install python3-tkinter
+#   Arch:           sudo pacman -S tk
+#
+# Para ejecutar el programa:
+#   Modo CLI:     python main.py
+#   Modo GUI:     python main.py --gui
